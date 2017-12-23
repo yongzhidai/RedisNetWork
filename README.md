@@ -1,0 +1,6 @@
+# RedisNetWork
+用Java模仿redis的网络处理处理流程
+
+都说redis性能特别好，单进程能支持高达十万qps，而且请求处理还是采用的单线程。不免好奇，就阅读了下redis的网络请求处理流程的源代码。
+redis在不同平台使用了不同的模型，linux上使用了epoll模型，mac os上使用了kqueue模型。
+epoll模型跟Java的nio十分相似，在这里就用Java模仿redis重新写了下请求处理流程。
